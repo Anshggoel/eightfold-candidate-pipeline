@@ -1,0 +1,16 @@
+{
+  "candidates": [
+    {
+      "name": "Ansh Sharma",
+      "email": "ansh.sharma@example.com",
+      "phone": "9876543210",
+      "skills": ["Python", "Data Structures", "SQL"]
+    },
+    {
+      "name": "Rohan Verma",
+      "email": "rohan.v@example.com",
+      "phone": "+91-99999-88888",
+      "skills": ["Java", "Spring Boot"]
+    }
+  ]
+}

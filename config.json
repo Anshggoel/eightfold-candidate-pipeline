@@ -1,0 +1,25 @@
+{
+  "fields": [
+    {
+      "path": "candidate_name", 
+      "from": "full_name"
+    },
+    {
+      "path": "verified_email", 
+      "from": "emails",
+      "normalization": {"case": "lowercase"}
+    },
+    {
+      "path": "formatted_phone", 
+      "from": "phones",
+      "normalization": {"format": "E.164"}
+    },
+    {
+      "path": "skills_inventory", 
+      "from": "skills",
+      "normalization": {"case": "lowercase"}
+    }
+  ],
+  "on_missing": "null",
+  "include_confidence": true
+}
