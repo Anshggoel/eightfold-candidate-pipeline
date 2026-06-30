@@ -47,7 +47,7 @@ class AdvancedCandidatePipeline:
                 
                 # Validate incoming email formats using regex to prevent downstream processing errors
                 if not raw_email or not re.match(r'[^@]+@[^@]+\.[^@]+', raw_email):
-                    print(f"⚠️ Skipping object due to invalid email address: '{raw_email}'")
+                    print(f" Skipping object due to invalid email address: '{raw_email}'")
                     continue
                 
                 email = raw_email
@@ -61,7 +61,7 @@ class AdvancedCandidatePipeline:
                     "provenance": [{"field": "all", "source": "ATS_JSON", "confidence": 1.0}]
                 }
         except Exception as e:
-            print(f"⚠️ Error parsing structured JSON: {e}")
+            print(f" Error parsing structured JSON: {e}")
 
     def _parse_txt(self, file_path):
         try:
@@ -93,7 +93,7 @@ class AdvancedCandidatePipeline:
                     "provenance": [{"field": "all", "source": "TXT_Notes", "confidence": 0.7}]
                 }
         except Exception as e:
-            print(f"⚠️ Error parsing unstructured text: {e}")
+            print(f" Error parsing unstructured text: {e}")
 
     def generate_projection(self, config_path):
         """Dynamic engine that reshapes data exactly as requested by config rules"""
@@ -120,7 +120,7 @@ class AdvancedCandidatePipeline:
                         skip_record = True
                         break
                     elif on_missing == "error":
-                        raise ValueError(f"🚨 CRITICAL PIPELINE ERROR: Missing mandatory field '{source_key}' for {email}")
+                        raise ValueError(f" CRITICAL PIPELINE ERROR: Missing mandatory field '{source_key}' for {email}")
                     else:
                         raw_val = None
                 
