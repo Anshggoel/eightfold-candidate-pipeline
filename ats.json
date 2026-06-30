@@ -1,8 +1,8 @@
 {
   "candidates": [
     {
-      "name": "Ansh Sharma",
-      "email": "ansh.sharma@example.com",
+      "name": "Ansh Goel",
+      "email": "ansh.goel@example.com",
       "phone": "9876543210",
       "skills": ["Python", "Data Structures", "SQL"]
     },
